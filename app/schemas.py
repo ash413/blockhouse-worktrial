@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from datetime import datetime
 from typing import Optional
 from .models import OrderType
@@ -13,5 +13,7 @@ class OrderResponse(OrderCreate):
     id: int
     created_at: datetime
 
-    class Config:
-        from_attributes = True
+    #class Config:
+    #    from_attributes = True
+#manual test with pytest fix
+    model_config = ConfigDict(from_attributes=True)
