@@ -13,9 +13,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 #everything else
 COPY . .
 
-#trading.db
-COPY trading.db .
-
 #expose port for fast api
 EXPOSE 80
 
