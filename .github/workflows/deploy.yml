@@ -39,3 +39,5 @@ jobs:
             docker stop trade-app || true
             docker rm trade-app || true
             docker run -d -p 80:80 --name trade-app trade-app
+
+            
